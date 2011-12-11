@@ -5,11 +5,11 @@ Requires at least: 3.2
 Tested up to: 3.3
 Stable tag: 0.1
 
-Displays the top Posts & Pages from the WordPress.com Stats plugin, now part of the Jetpack suite. The Jetpack plugin is required to use this plugin.
+Displays the top Posts & Pages from the WordPress.com Stats plugin, now part of the Jetpack suite.
 
 == Description ==
 
-The Top Posts & Pages Widget displays your sites most popular posts & pages according to the WordPress.com stats plugin.
+The Top Posts & Pages Widget displays your sites most popular posts & pages according to the WordPress.com stats plugin. The Jetpack plugin is required to use this plugin.
 
 The Top Posts & Pages widget found on wordpress.com inspired this plugin, but this plugin allows more fine-tuning of what type of posts to show.
 
