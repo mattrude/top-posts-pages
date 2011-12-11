@@ -11,6 +11,10 @@ Displays the top Posts & Pages from the WordPress.com Stats plugin, now part of 
 
 The Top Posts & Pages Widget displays your sites most popular posts & pages according to the WordPress.com stats plugin.
 
+The Top Posts & Pages widget found on wordpress.com inspired this plugin, but this plugin allows more fine-tuning of what type of posts to show.
+
+This plugin is fully localized and a POT file is included.  If you would like to help translate this plugin, please contact me.
+
 == Installation ==
 As with most WordPress plugins, there is two ways of installing this plugin.
 
