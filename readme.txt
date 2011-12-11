@@ -31,6 +31,10 @@ As with most WordPress plugins, there is two ways of installing this plugin.
 1. Extract the zip file and copy the folder "top-posts-pages-widget" into the "wp-content/plugins/" directory in your WordPress installation.
 1. Activate the plugin from your Dashboard by going to Plugins -> Installed page.
 
+== Screenshots ==
+
+1. The widgets options in the dashboard.
+
 == Changelog ==
 
 = 0.1 =
