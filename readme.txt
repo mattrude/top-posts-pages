@@ -37,5 +37,9 @@ As with most WordPress plugins, there is two ways of installing this plugin.
 
 == Changelog ==
 
+= 0.2 =
+* Corrected 'Number of posts to show', to now show the correct number of posts.
+* Added wp_cache support.
+
 = 0.1 =
 * First Release - Everything's new
