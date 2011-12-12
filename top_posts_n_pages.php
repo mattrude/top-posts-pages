@@ -30,6 +30,7 @@ class top_posts_n_pages_widget extends WP_Widget {
     $tpp_number_of_posts = strip_tags($instance['number_of_posts']);
     $tpp_show_pages = $instance['show_pages'];
     $tpp_show_attachments = $instance['show_attachments'];
+    $tpp_show_home = $instance['show_home'];
 
     if ($tpp_widget_title == "") {
       $tpp_widget_title = __('Top Posts','top-posts-n-pages-widget');
@@ -41,6 +42,10 @@ class top_posts_n_pages_widget extends WP_Widget {
 
     if ($tpp_show_attachments == "") {
       $tpp_show_attachments = "off";
+    }
+
+    if ($tpp_show_home == "") {
+      $tpp_show_home = "off";
     }
 
     if ( $tpp_number_of_posts < 1 || 20 < $tpp_number_of_posts )
@@ -66,6 +71,10 @@ class top_posts_n_pages_widget extends WP_Widget {
   
           if ( $tpp_show_attachments == "off" ) {
             if( $top_post_id->post_type == "attachment" ) continue;
+          } 
+  
+          if ( $tpp_show_home == "off" ) {
+            if( $top_post['post_title'] == "Home page" ) continue;
           } ?>
 
           <li><a href="<?php echo $top_post['post_permalink']; ?>"><?php echo $top_post['post_title']; ?></a></li> <?php
@@ -86,6 +95,7 @@ class top_posts_n_pages_widget extends WP_Widget {
     $instance['number_of_posts'] = strip_tags($new_instance['number_of_posts']);
     $instance['show_pages'] = strip_tags(empty($new_instance['show_pages']) ? 'on' : apply_filters('show_pages', $new_instance['show_pages']));
     $instance['show_attachments'] = strip_tags(empty($new_instance['show_attachments']) ? 'off' : apply_filters('show_attachments', $new_instance['show_attachments']));
+    $instance['show_home'] = strip_tags(empty($new_instance['show_home']) ? 'off' : apply_filters('show_home', $new_instance['show_home']));
     return $instance;
   }
 
@@ -94,6 +104,7 @@ class top_posts_n_pages_widget extends WP_Widget {
     $tpp_number_of_posts = strip_tags($instance['number_of_posts']);
     $tpp_show_pages = $instance['show_pages'];
     $tpp_show_attachments = $instance['show_attachments'];
+    $tpp_show_home = $instance['show_home'];
 
     if ($tpp_widget_title == "") {
       $tpp_widget_title = __('Top Posts','top-posts-n-pages-widget');
@@ -105,6 +116,10 @@ class top_posts_n_pages_widget extends WP_Widget {
 
     if ($tpp_show_attachments == "") {
       $tpp_show_attachments = "off";
+    }
+
+    if ($tpp_show_home == "") {
+      $tpp_show_home = "off";
     }
 
     if ( $tpp_number_of_posts < 1 || 20 < $tpp_number_of_posts )
@@ -124,6 +139,9 @@ class top_posts_n_pages_widget extends WP_Widget {
     
     <p><input class="checkbox" type="checkbox" <?php if ("$tpp_show_attachments" == "on" ){echo 'checked="checked"';} ?> id="<?php echo $this->get_field_id('show_attachments'); ?>" name="<?php echo $this->get_field_name('show_attachments'); ?>" />
     <label for="<?php echo $this->get_field_id('show_attachments'); ?>"><?php _e('Show attachments?', 'top-posts-n-pages-widget')?></label></p>
+    
+    <p><input class="checkbox" type="checkbox" <?php if ("$tpp_show_home" == "on" ){echo 'checked="checked"';} ?> id="<?php echo $this->get_field_id('show_home'); ?>" name="<?php echo $this->get_field_name('show_home'); ?>" />
+    <label for="<?php echo $this->get_field_id('show_home'); ?>"><?php _e('Show Home Page?', 'top-posts-n-pages-widget')?></label></p>
     
     <p><?php _e( 'Top Posts &amp; Pages are calculated from WordPress.com stats plugin for that last 7 days. So, they take a while to change.', 'top-posts-n-pages-widget'); ?></p><?php
 
