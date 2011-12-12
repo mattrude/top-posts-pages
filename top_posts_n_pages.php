@@ -49,16 +49,16 @@ class top_posts_n_pages_widget extends WP_Widget {
     echo $before_widget . $before_title . $tpp_widget_title . $after_title; ?>
     <ul> <?php
 
-    if ( function_exists('stats_get_csv') ) {
+    if ( function_exists('top_post_ids',$blog_id) ) {
       $top_posts = wp_cache_get('top_posts');
       if ( false == $top_posts ) {
         $top_posts = stats_get_csv('postviews', "days=7&limit=50" );
-        wp_cache_set( 'stats_get_csv', $top_posts,$blog_id,'1800' );
+        wp_cache_set( 'top_posts_ids',$top_posts,$blog_id,'1800' );
       }
       $pn = 1;
-      foreach( $top_posts as $posts ) : 
+      foreach( $top_posts as $top_post ) : 
 	if ( $pn <= $tpp_number_of_posts ) {
-        $postid = get_post($posts['post_id']);
+        $postid = get_post($top_post['post_id']);
         if ( $tpp_show_pages == "off" ) {
           if( $postid->post_type == "page" ) continue;
         }
