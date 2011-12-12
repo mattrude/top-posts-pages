@@ -93,7 +93,7 @@ class top_posts_n_pages_widget extends WP_Widget {
     $instance = $old_instance;
     $instance['widget_title'] = strip_tags($new_instance['widget_title']);
     $instance['number_of_posts'] = strip_tags($new_instance['number_of_posts']);
-    $instance['show_pages'] = strip_tags(empty($new_instance['show_pages']) ? 'on' : apply_filters('show_pages', $new_instance['show_pages']));
+    $instance['show_pages'] = strip_tags(empty($new_instance['show_pages']) ? 'off' : apply_filters('show_pages', $new_instance['show_pages']));
     $instance['show_attachments'] = strip_tags(empty($new_instance['show_attachments']) ? 'off' : apply_filters('show_attachments', $new_instance['show_attachments']));
     $instance['show_home'] = strip_tags(empty($new_instance['show_home']) ? 'off' : apply_filters('show_home', $new_instance['show_home']));
     return $instance;
