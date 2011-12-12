@@ -74,7 +74,8 @@ class top_posts_n_pages_widget extends WP_Widget {
           } 
   
           if ( $tpp_show_home == "off" ) {
-            if( $top_post['post_title'] == "Home page" ) continue;
+           // if( $top_post['post_title'] == "Home page" ) continue;
+            if( $top_post['post_id'] == false ) continue;
           } ?>
 
           <li><a href="<?php echo $top_post['post_permalink']; ?>"><?php echo $top_post['post_title']; ?></a></li> <?php
