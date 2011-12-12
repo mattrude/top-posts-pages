@@ -5,7 +5,7 @@
  * Description: Displays the top Posts & Pages from the WordPress.com Stats plugin, now part of the <a href="http://jetpack.me/" target="_blank">Jetpack</a> suite. The Jetpack plugin is required to use this plugin.
  * Author: Matt Rude
  * Author URI: http://mattrude.com
- * Version: 0.1
+ * Version: 0.2
  * License: GPLv2
  */
 
@@ -46,13 +46,18 @@ class top_posts_n_pages_widget extends WP_Widget {
       $tpp_number_of_posts = 5;
 
     echo $before_widget . $before_title . $tpp_widget_title . $after_title; ?>
-    <ul>
-   
-    <?php
+    <ul> <?php
 
     if ( function_exists('stats_get_csv') ) {
-      $top_posts = stats_get_csv('postviews', "days=7&limit=$tpp_number_of_posts" );
-      foreach( $top_posts as $posts ) :
+      $top_posts = wp_cache_get('top_posts');
+      if ( false == $top_posts ) {
+        $top_posts = stats_get_csv('postviews', "days=7&limit=50" );
+        wp_cache_set( 'stats_get_csv', $top_posts );
+      }
+      
+      $pn = 1;
+      foreach( $top_posts as $posts ) : 
+	if ( $pn <= $tpp_number_of_posts ) {
         $postid = get_post($posts['post_id']);
         if ( $tpp_show_pages == "off" ) {
           if( $postid->post_type == "page" ) continue;
@@ -60,9 +65,15 @@ class top_posts_n_pages_widget extends WP_Widget {
   
         if ( $tpp_show_attachments == "off" ) {
           if( $postid->post_type == "attachment" ) continue;
-        } ?>
+        }
+
+
+	echo $pn; ?>
+
         <li><a href="<?php echo get_permalink( $postid ); ?>"><?php echo $postid->post_title; ?></a></li>
-      <?php endforeach;
+	<?php ++$pn ?>
+      <?php }
+	 endforeach;
     } else { ?>
       <p> <?php _e('I\'m sorry, but you don\'t seem to have the WordPress.com stat plugin installed on this site.'); ?> </p><?php
     } ?>
