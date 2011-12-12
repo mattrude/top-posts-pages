@@ -65,10 +65,7 @@ class top_posts_n_pages_widget extends WP_Widget {
   
         if ( $tpp_show_attachments == "off" ) {
           if( $postid->post_type == "attachment" ) continue;
-        }
-
-
-	echo $pn; ?>
+        } ?>
 
         <li><a href="<?php echo get_permalink( $postid ); ?>"><?php echo $postid->post_title; ?></a></li>
 	<?php ++$pn ?>
