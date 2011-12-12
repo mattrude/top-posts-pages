@@ -5,7 +5,7 @@
  * Description: Displays the top Posts & Pages from the WordPress.com Stats plugin, now part of the <a href="http://jetpack.me/" target="_blank">Jetpack</a> suite. The Jetpack plugin is required to use this plugin.
  * Author: Matt Rude
  * Author URI: http://mattrude.com
- * Version: 0.4
+ * Version: 0.5
  * License: GPLv2
  */
 
