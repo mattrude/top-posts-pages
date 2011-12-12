@@ -25,6 +25,7 @@ class top_posts_n_pages_widget extends WP_Widget {
 
   function widget($args, $instance) {
     extract($args);
+    global $blog_id;
     $tpp_widget_title = strip_tags($instance['widget_title']);
     $tpp_number_of_posts = strip_tags($instance['number_of_posts']);
     $tpp_show_pages = $instance['show_pages'];
@@ -52,9 +53,8 @@ class top_posts_n_pages_widget extends WP_Widget {
       $top_posts = wp_cache_get('top_posts');
       if ( false == $top_posts ) {
         $top_posts = stats_get_csv('postviews', "days=7&limit=50" );
-        wp_cache_set( 'stats_get_csv', $top_posts );
+        wp_cache_set( 'stats_get_csv', $top_posts,$blog_id,'1800' );
       }
-      
       $pn = 1;
       foreach( $top_posts as $posts ) : 
 	if ( $pn <= $tpp_number_of_posts ) {
