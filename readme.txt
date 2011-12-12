@@ -38,6 +38,10 @@ As with most WordPress plugins, there is two ways of installing this plugin.
 
 == Changelog ==
 
+= 0.4 =
+
+* Add 'Show Home Page?' support to plugin
+
 = 0.3 =
 
 * Rework the post_id setup to better display itemes.
