@@ -5,7 +5,7 @@
  * Description: Displays the top Posts & Pages from the WordPress.com Stats plugin, now part of the <a href="http://jetpack.me/" target="_blank">Jetpack</a> suite. The Jetpack plugin is required to use this plugin.
  * Author: Matt Rude
  * Author URI: http://mattrude.com
- * Version: 0.2
+ * Version: 0.3
  * License: GPLv2
  */
 
@@ -49,8 +49,8 @@ class top_posts_n_pages_widget extends WP_Widget {
     echo $before_widget . $before_title . $tpp_widget_title . $after_title; ?>
     <ul> <?php
 
-    if ( function_exists('top_post_ids',$blog_id) ) {
-      $top_posts = wp_cache_get('top_posts');
+    if ( function_exists('stats_get_csv') ) {
+      $top_posts = wp_cache_get('top_posts_ids',$blog_id);
       if ( false == $top_posts ) {
         $top_posts = stats_get_csv('postviews', "days=7&limit=50" );
         wp_cache_set( 'top_posts_ids',$top_posts,$blog_id,'1800' );
@@ -58,19 +58,20 @@ class top_posts_n_pages_widget extends WP_Widget {
       $pn = 1;
       foreach( $top_posts as $top_post ) : 
 	if ( $pn <= $tpp_number_of_posts ) {
-        $postid = get_post($top_post['post_id']);
-        if ( $tpp_show_pages == "off" ) {
-          if( $postid->post_type == "page" ) continue;
-        }
-  
-        if ( $tpp_show_attachments == "off" ) {
-          if( $postid->post_type == "attachment" ) continue;
-        } ?>
+          $top_post_id = get_post($top_post['post_id']);
 
-        <li><a href="<?php echo get_permalink( $postid ); ?>"><?php echo $postid->post_title; ?></a></li>
-	<?php ++$pn ?>
-      <?php }
-	 endforeach;
+          if ( $tpp_show_pages == "off" ) {
+            if( $top_post_id->post_type == "page" ) continue;
+          }
+  
+          if ( $tpp_show_attachments == "off" ) {
+            if( $top_post_id->post_type == "attachment" ) continue;
+          } ?>
+
+          <li><a href="<?php echo $top_post['post_permalink']; ?>"><?php echo $top_post['post_title']; ?></a></li> <?php
+          ++$pn; 
+        }
+      endforeach;
     } else { ?>
       <p> <?php _e('I\'m sorry, but you don\'t seem to have the WordPress.com stat plugin installed on this site.'); ?> </p><?php
     } ?>

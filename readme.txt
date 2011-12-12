@@ -3,7 +3,7 @@ Contributors: mattrude
 Tags: widget
 Requires at least: 3.2
 Tested up to: 3.3
-Stable tag: 0.2
+Stable tag: 0.3
 
 Displays the top Posts & Pages from the WordPress.com Stats plugin, now part of the Jetpack suite.
 
@@ -37,9 +37,15 @@ As with most WordPress plugins, there is two ways of installing this plugin.
 
 == Changelog ==
 
+= 0.3 =
+
+* Rework the post_id setup to better display itemes.
+
 = 0.2 =
+
 * Corrected 'Number of posts to show', to now show the correct number of posts.
 * Added wp_cache support.
 
 = 0.1 =
+
 * First Release - Everything's new
