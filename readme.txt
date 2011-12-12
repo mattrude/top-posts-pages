@@ -16,6 +16,7 @@ The Top Posts & Pages widget found on wordpress.com inspired this plugin, but th
 This plugin is fully localized and a POT file is included.  If you would like to help translate this plugin, please contact me.
 
 == Installation ==
+
 As with most WordPress plugins, there is two ways of installing this plugin.
 
 = Primary Option =
