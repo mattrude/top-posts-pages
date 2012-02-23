@@ -4,6 +4,7 @@ Tags: widget
 Requires at least: 3.2
 Tested up to: 3.3
 Stable tag: 0.3
+License: GPLv2 or later
 
 Displays the top Posts & Pages from the WordPress.com Stats plugin, now part of the Jetpack suite.
 
