@@ -6,7 +6,7 @@ The Top Posts & Pages widget found on wordpress.com inspired this plugin, but th
 
 This plugin is fully localized and a [POT file](https://github.com/mattrude/top-posts-pages/blob/master/languages/top-posts-n-pages-widget.pot) is included.  If you would like to help translate this plugin, please [contact me](http://mattrude.com/contact-me/).
 
-For Support, please contact me via the [WordPress Forums](http://wordpress.org/tags/top-posts-pages-widget?forum_id=10#postform), if you find a bug, please create a ticket on it's [Github Issues](https://github.com/mattrude/top-posts-pages/issues) page.
+For Support, please contact me via the [plugins page on my personal site](http://mattrude.com/projects/top-posts-pages-widget/), if you find a bug, please create a ticket on it's [Github Issues](https://github.com/mattrude/top-posts-pages/issues) page.
 
 ## Installation
 
