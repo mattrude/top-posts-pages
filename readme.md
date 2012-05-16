@@ -2,7 +2,7 @@
 
 The Top Posts & Pages Widget displays your [WordPress](http://wordpress.org) sites most popular posts & pages according to the WordPress.com stats plugin, now part of the [Jetpack suite](http://wordpress.org/extend/plugins/jetpack/). The Jetpack plugin is required to use this plugin.
 
-The Top Posts & Pages widget found on wordpress.com inspired this plugin, but this plugin allows more fine-tuning of what type of posts to show.
+The [Top Posts & Pages widget found on wordpress.com](http://en.support.wordpress.com/widgets/top-posts-widget/) inspired this plugin, but this plugin allows more fine-tuning of what type of posts to show.
 
 This plugin is fully localized and a [POT file](https://github.com/mattrude/top-posts-pages/blob/master/languages/top-posts-n-pages-widget.pot) is included.  If you would like to help translate this plugin, please [contact me](http://mattrude.com/contact-me/).
 
