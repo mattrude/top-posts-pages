@@ -36,7 +36,9 @@ As with most WordPress plugins, there is two ways of installing this plugin.
 
 ## Screenshots
 
-1. The widgets options in the dashboard.
+![The widgets options in the dashboard.](https://github.com/mattrude/top-posts-pages/raw/master/screenshot-1.png)
+
+The widgets options in the dashboard.
 
 ## Changelog
 
