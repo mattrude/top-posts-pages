@@ -1,21 +1,10 @@
 # Top Posts & Pages Widget
 
-* Contributors: mattrude
-* Tags: widget
-* Requires at least: 3.2
-* Tested up to: 3.3
-* License: GPLv2 or later
-* Stable tag: 0.5
-
-Displays the top Posts & Pages from the WordPress.com Stats plugin, now part of the Jetpack suite.
-
-## Description
-
-The Top Posts & Pages Widget displays your sites most popular posts & pages according to the WordPress.com stats plugin. The Jetpack plugin is required to use this plugin.
+The Top Posts & Pages Widget displays your [WordPress](http://wordpress.org) sites most popular posts & pages according to the WordPress.com stats plugin, now part of the [Jetpack suite](http://wordpress.org/extend/plugins/jetpack/). The Jetpack plugin is required to use this plugin.
 
 The Top Posts & Pages widget found on wordpress.com inspired this plugin, but this plugin allows more fine-tuning of what type of posts to show.
 
-This plugin is fully localized and a POT file is included.  If you would like to help translate this plugin, please contact me.
+This plugin is fully localized and a [POT file](https://github.com/mattrude/top-posts-pages/blob/master/languages/top-posts-n-pages-widget.pot) is included.  If you would like to help translate this plugin, please [contact me](http://mattrude.com/contact-me/).
 
 ## Installation
 
@@ -28,7 +17,7 @@ As with most WordPress plugins, there is two ways of installing this plugin.
 1. Search for `Top Posts & Pages Widget`
 1. Click the `Install Now` link and follow the instructions.
 
-### Backup Option
+### Secondary Option
 
 1. Download the latest version from the download page (http://wordpress.org/extend/plugins/top-posts-pages-widget/)
 1. Extract the zip file and copy the folder "top-posts-pages-widget" into the "wp-content/plugins/" directory in your WordPress installation.
@@ -39,6 +28,14 @@ As with most WordPress plugins, there is two ways of installing this plugin.
 ![The widgets options in the dashboard.](https://github.com/mattrude/top-posts-pages/raw/master/screenshot-1.png)
 
 The widgets options in the dashboard.
+
+## Plugin Meta Data
+
+* Contributors: [mattrude](https://github.com/mattrude)
+* Requires at least WordPress: 3.2
+* Tested up to WordPress: 3.3
+* License: [GPLv2](https://github.com/mattrude/top-posts-pages/blob/master/license.txt) or later
+* Stable Version: 0.5
 
 ## Changelog
 
