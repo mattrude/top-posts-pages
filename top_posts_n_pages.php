@@ -7,6 +7,7 @@
  * Author URI: http://mattrude.com
  * Version: 0.5
  * License: GPLv2
+ * GitHub Plugin URI: mattrude/top-posts-pages
  */
 
 class top_posts_n_pages_widget extends WP_Widget {
